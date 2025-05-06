@@ -9,6 +9,7 @@ int main() {
     cout << "pick a Number!" << "\n";
     string num;
      cin >> num;
+     stringCheck(num);
      dataTypeCheck(num);
      overloadExecution();
 

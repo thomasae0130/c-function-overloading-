@@ -10,12 +10,26 @@ double multiplyNumber(double num) {
     return num * 3;
 }
 
+int stringCheck(string& num) {
+    string allChars = 
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        "abcdefghijklmnopqrstuvwxyz"
+        "0123456789"
+        "!\"#$%&'()*+,-/:;<=>?@[\\]^_`{|}~";
+
+        if (num.find(allChars)) {
+            cout << "Enter only integers or decimals" << "\n";
+            cin >> num;
+        }
+        return 0;
+}
+
 int dataTypeCheck(string& num) {
 
     /*
     .find is native to the string library and locates and returns the index value of the searched for item if it exists
-    when using as a comparison != to return a boolean statement if the item is found a index it return its interpreted a true and if isnt as false 
-     npos is a constant  when the item is not found returns a boolean of false 
+    when using as a comparison != to return a boolean statement if the item is found the index value it returns is interpreted a true and if it isnt as false 
+     string::npos is a constant  when the item is not found returns a boolean of false 
      the != comparison is comparing if the search for value isnt found
      if the value is found then it will return a value of true as it would mean it is infact not equal to npos 
      and false if it is equal to it
