@@ -16,12 +16,17 @@ int stringCheck(string& num) {
         "abcdefghijklmnopqrstuvwxyz"
         "0123456789"
         "!\"#$%&'()*+,-/:;<=>?@[\\]^_`{|}~";
-
-        if (num.find(allChars)) {
-            cout << "Enter only integers or decimals" << "\n";
+        while(true) {
+          try {
+            double value  = stod(num);
+            cout << "Good Boy" << "\n";
+            break;
+          } catch (const invalid_argument& e) {
+            cout << "input a integer or decimal." << "\n";
             cin >> num;
+          }
         }
-        return 0;
+          return 0;   
 }
 
 int dataTypeCheck(string& num) {
@@ -66,9 +71,9 @@ int dataTypeCheck(string& num) {
 
 int overloadExecution () {
     if (doubleNum > 0) {
-        cout <<  multiplyNumber(doubleNum) << "\n";
+        cout << "Your number is " <<  multiplyNumber(doubleNum) << "\n";
     } else {
-        cout << multiplyNumber(intNum) << "\n";
+        cout << "Your number is " << multiplyNumber(intNum) << "\n";
     }
     return 0; 
 
