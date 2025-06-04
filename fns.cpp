@@ -11,11 +11,6 @@ double multiplyNumber(double num) {
 }
 
 int stringCheck(string& num) {
-    string allChars = 
-        "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        "abcdefghijklmnopqrstuvwxyz"
-        "0123456789"
-        "!\"#$%&'()*+,-/:;<=>?@[\\]^_`{|}~";
         while(true) {
           try {
             double value  = stod(num);
