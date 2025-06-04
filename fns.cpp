@@ -48,14 +48,9 @@ int dataTypeCheck(string& num) {
                 break;
             }
         }
-         
-         if (greaterThanZero == true) {
-            // string to double
-            doubleNum = stod(num);
-         } else {
-            // string to int 
-            intNum = stoi(num);
-         }
+
+        greaterThanZero == true ? doubleNum = stod(num) : intNum = stoi(num);
+        
     } else {
         intNum = stoi(num);
     }
@@ -65,11 +60,8 @@ int dataTypeCheck(string& num) {
 
 
 int overloadExecution () {
-    if (doubleNum > 0) {
-        cout << "Your number is " <<  multiplyNumber(doubleNum) << "\n";
-    } else {
-        cout << "Your number is " << multiplyNumber(intNum) << "\n";
-    }
+    
+    doubleNum > 0 ? cout << "Your number is " <<  multiplyNumber(doubleNum) << "\n" : cout << "Your number is " <<  multiplyNumber(doubleNum) << "\n";
     return 0; 
 
 }
